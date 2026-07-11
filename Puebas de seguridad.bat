@@ -345,7 +345,6 @@ echo +================================================================+
 echo ^|  ACTUALIZANDO POLITICAS DE GRUPO                               ^|
 echo +================================================================+
 gpupdate /force
-gpresult /r
 echo.
 echo  [ OK ] Politicas actualizadas.
 pause
