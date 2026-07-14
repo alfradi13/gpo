@@ -44,8 +44,6 @@ echo.
 echo  [1/4] Desactivando procesos de seguridad temporalmente...
 powershell -NoProfile -Command "Get-Process | Where-Object { $_.Name -match 'horus|rpcnet|svctcom' } | Stop-Process -Force -ErrorAction SilentlyContinue" >nul 2>&1
 wmic process where "name like '%%horus%%'" delete >nul 2>&1
-wmic process where "name like '%%rpcnet%%'" delete >nul 2>&1
-wmic process where "name like '%%svctcom%%'" delete >nul 2>&1
 net stop HorusService >nul 2>&1
 sc stop HorusService >nul 2>&1
 sc config HorusService start= disabled >nul 2>&1
@@ -82,7 +80,7 @@ if "!DOWNLOAD_ACTIVTRACK!"=="1" (
     cmd /c start "" "%LINK_ACTIVTRACK%"
 )
 
-tasklist 2>nul | findstr /i /c:"RPCNET" /c:"Absolute" >nul
+tasklist 2>nul | findstr /i /c:"rpcnet" /c:"Absolute" >nul
 if %errorLevel% NEQ 0 set "DOWNLOAD_ABSOLUTE=1"
 if "!DOWNLOAD_ABSOLUTE!"=="1" (
     echo       [ INFO ] Absolute/RPCNET no detectado. Abriendo carpeta de instalacion...
@@ -342,11 +340,9 @@ REM ============================================================
 :GPUPDATE
 cls
 echo +================================================================+
-echo ^|  ACTUALIZANDO POLITICAS DE GRUPO                               ^|
+echo ^|  ACTUALIZANDO POLITICAS DE GRUPO  (deshabilitado)             ^|
 echo +================================================================+
-echo.
 echo  [ OK ] Politicas actualizadas.
-pause
 goto MENU
  
 REM ============================================================
@@ -439,7 +435,7 @@ start https://ftp.ext.hp.com/pub/caps-softpaq/cmit/HPIA.html
 echo  [11/15] Abriendo guia WinDbg...
 start https://learn.microsoft.com/en-us/windows-hardware/drivers/debuggercmds/-analyze
 echo  [12/15] Actualizando politicas de grupo...
-gpupdate /force >nul 2>&1
+echo ejecutar ya que esta deshabilitado gpupdate /force >nul 2>&1
 echo  [13/15] Verificando servicio de Windows Update...
 net start wuauserv >nul 2>&1
 
