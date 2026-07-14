@@ -344,7 +344,6 @@ cls
 echo +================================================================+
 echo ^|  ACTUALIZANDO POLITICAS DE GRUPO                               ^|
 echo +================================================================+
-gpupdate /force
 echo.
 echo  [ OK ] Politicas actualizadas.
 pause
