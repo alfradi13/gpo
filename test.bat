@@ -380,12 +380,6 @@ start "" "%TEMP%\HPIA\HPIA.exe"
 echo [ OK ] Instalación finalizada.
 echo.
 
-echo [3/3] Eliminando archivos temporales...
-
-del "%TEMP%\HPIA\HPIA.exe" >nul 2>&1
-rd "%TEMP%\HPIA" >nul 2>&1
-
-echo.
 echo [ OK ] Proceso completado correctamente.
 echo.
 
@@ -590,8 +584,6 @@ if exist "%TEMP%\HPIA.exe" (
     start "" "%TEMP%\HPIA.exe"
 
     echo           [ OK ] Instalación finalizada.
-
-    del "%TEMP%\HPIA.exe" >nul 2>&1
 ) else (
     echo           [ ERROR ] No fue posible descargar HP Image Assistant.
 )
