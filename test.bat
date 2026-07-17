@@ -352,12 +352,43 @@ REM ============================================================
 :HPIA
 cls
 echo +================================================================+
-echo ^|  ABRIENDO HP IMAGE ASSISTANT                                   ^|
+echo ^|      INSTALANDO HP IMAGE ASSISTANT                             ^|
 echo +================================================================+
-echo  Abriendo pagina de descarga en el navegador...
-start https://ftp.ext.hp.com/pub/caps-softpaq/cmit/HPIA.html
 echo.
-echo  [ INFO ] Descarga y ejecuta HP Image Assistant para analizar el equipo.
+
+if not exist "%TEMP%\HPIA" mkdir "%TEMP%\HPIA"
+
+echo [1/3] Descargando HP Image Assistant...
+
+powershell -ExecutionPolicy Bypass -Command ^
+"Invoke-WebRequest -Uri 'https://hpia.hpcloud.hp.com/downloads/hpia/hp-hpia-5.3.6.exe' -OutFile '%TEMP%\HPIA\HPIA.exe'"
+
+if not exist "%TEMP%\HPIA\HPIA.exe" (
+    echo.
+    echo [ERROR] No fue posible descargar HP Image Assistant.
+    pause
+    goto MENU
+)
+
+echo [ OK ] Descarga completada.
+echo.
+
+echo [2/3] Ejecutando instalador...
+
+start /wait "" "%TEMP%\HPIA\HPIA.exe"
+
+echo [ OK ] Instalación finalizada.
+echo.
+
+echo [3/3] Eliminando archivos temporales...
+
+del "%TEMP%\HPIA\HPIA.exe" >nul 2>&1
+rd "%TEMP%\HPIA" >nul 2>&1
+
+echo.
+echo [ OK ] Proceso completado correctamente.
+echo.
+
 pause
 goto MENU
  
