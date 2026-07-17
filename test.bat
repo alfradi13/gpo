@@ -375,7 +375,7 @@ echo.
 
 echo [2/3] Ejecutando instalador...
 
-start /wait "" "%TEMP%\HPIA\HPIA.exe"
+start "" "%TEMP%\HPIA\HPIA.exe"
 
 echo [ OK ] Instalación finalizada.
 echo.
@@ -587,7 +587,7 @@ if exist "%TEMP%\HPIA.exe" (
     echo           [ OK ] Descarga completada.
     
     echo [12/15] Instalando HP Image Assistant...
-    start /wait "" "%TEMP%\HPIA.exe"
+    start "" "%TEMP%\HPIA.exe"
 
     echo           [ OK ] Instalación finalizada.
 
