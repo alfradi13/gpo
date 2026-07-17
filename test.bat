@@ -546,9 +546,24 @@ echo  [10/15] Abriendo carpeta Minidumps (si existe)...
 if exist "C:\Windows\Minidump\" start "" "C:\Windows\Minidump\"
 echo           [ OK ] Completado.
 
-echo  [11/15] Abriendo HP Image Assistant en navegador...
-start https://ftp.ext.hp.com/pub/caps-softpaq/cmit/HPIA.html
-echo           [ OK ] Completado.
+echo.
+echo [11/15] Descargando HP Image Assistant...
+
+powershell -ExecutionPolicy Bypass -Command ^
+"Invoke-WebRequest -Uri 'https://hpia.hpcloud.hp.com/downloads/hpia/hp-hpia-5.3.6.exe' -OutFile '%TEMP%\HPIA.exe'"
+
+if exist "%TEMP%\HPIA.exe" (
+    echo           [ OK ] Descarga completada.
+    
+    echo [12/15] Instalando HP Image Assistant...
+    start /wait "" "%TEMP%\HPIA.exe"
+
+    echo           [ OK ] Instalación finalizada.
+
+    del "%TEMP%\HPIA.exe" >nul 2>&1
+) else (
+    echo           [ ERROR ] No fue posible descargar HP Image Assistant.
+)
 
 echo  [12/15] Iniciando GPUPDATE en ventana aislada...
 start "GPUPDATE - Actualizacion de Politicas" cmd /c "chcp 65001 >nul & echo +============================================+ & echo ^|  ACTUALIZANDO POLITICAS DE GRUPO (GPO)        ^| & echo +============================================+ & echo. & gpupdate /force & echo. & echo +============================================+ & echo ^|  PROCESO FINALIZADO                        ^| & echo +============================================+ & pause"
