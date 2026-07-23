@@ -23,7 +23,9 @@ https://url.unad.edu.co/6KBqo
 SIGEM UNAD - inventarios
 
 Inventario mobiliario: https://sigscan.lovable.app
+
 Escanear Placas: https://sigscan.lovable.app
+
 Inventario tecnologico: https://sigat.lovable.app
 
 			Universidad Nacional Abierta y a Distancia - UNAD		
