@@ -22,7 +22,7 @@ https://url.unad.edu.co/6KBqo
 
 SIGEM UNAD - inventarios
 
-Inventario mobiliario: https://sigscan.lovable.app
+Inventario mobiliario: https://sigem.lovable.app
 
 Escanear Placas: https://sigscan.lovable.app
 
