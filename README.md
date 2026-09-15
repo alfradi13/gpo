@@ -20,7 +20,7 @@ SIGEM UNAD - inventarios
 
 Inventario mobiliario: https://sigem.lovable.app
 
-Escanear Placas: https://sigscan.lovable.app
+Escanear Placas: https://sigatscan.lovable.app/
 
 Inventario tecnologico: https://sigat.lovable.app
 
