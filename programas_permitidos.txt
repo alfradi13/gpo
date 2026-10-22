@@ -1,0 +1,73 @@
+# Lista de programas permitidos
+# Un programa por linea. Coincidencia parcial, sin distinguir mayusculas.
+# Las lineas que empiezan con # son ignoradas.
+# Edita este archivo con los programas autorizados de la empresa.
+
+Microsoft Office
+Microsoft Edge
+Google Chrome
+Microsoft Teams
+Zoom
+AnyDesk
+7-Zip
+WinRAR
+Adobe Acrobat
+Adobe Reader Pro
+ArcGis Pro
+Arduino 
+Atlas TI
+Brave
+Cisco packet tracer
+Examen de Ingles
+Flexsim
+Foxit Reade PDF - Mac
+Google Earth
+HeidiSQL
+Horus
+Hpia
+LabView
+Lumi
+Matlab
+MySql
+Notepad++
+OBS
+Office 2024
+Office 365
+Optikeypro
+PDF24
+Peazip
+php
+postgresql
+Power Bi
+Python
+Qgis
+R
+Sico
+Simuladores Fotografia y Tv
+SmartPSSLite
+spyder
+SQL Server Express
+SSMS
+Taurus
+Tobii
+Tracker
+Visio
+Visual Code
+Visual Studio
+VPN
+Zotero
+Safe Exam Browser
+Nextcloud
+Git
+Wolf Security
+Sonómetro Dataloger DT-173
+Zoom
+Audacity 3.7.9
+HP Notifications
+HP One Agent
+HP Update
+IHMC CmapTools v6.04
+Poly Studio
+WXP Insights Agent
+WXP Insights Analytics
+WXP Insights Analytics - Dependencies
