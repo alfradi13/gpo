@@ -279,6 +279,65 @@ if not exist "%RUTA_LISTA%" (
         echo 7-Zip
         echo WinRAR
         echo Adobe Acrobat
+        echo Adobe Reader Pro
+        echo ArcGis Pro
+        echo Arduino 
+        echo Atlas TI
+        echo Brave
+        echo Cisco packet tracer
+        echo Examen de Ingles
+        echo Flexsim
+        echo Foxit Reade PDF - Mac
+        echo Google Earth
+        echo HeidiSQL
+        echo Horus
+        echo Hpia
+        echo LabView
+        echo Lumi
+        echo Matlab
+        echo MySql
+        echo Notepad++
+        echo OBS
+        echo Office 2024
+        echo Office 365
+        echo Optikeypro
+        echo PDF24
+        echo Peazip
+        echo php
+        echo postgresql
+        echo Power Bi
+        echo Python
+        echo Qgis
+        echo R
+        echo Sico
+        echo Simuladores Fotografia y Tv
+        echo SmartPSSLite
+        echo spyder
+        echo SQL Server Express
+        echo SSMS
+        echo Taurus
+        echo Tobii
+        echo Tracker
+        echo Visio
+        echo Visual Code
+        echo Visual Studio
+        echo VPN
+        echo Zotero
+        echo Safe Exam Browser
+        echo Nextcloud
+        echo Git
+        echo Wolf Security
+        echo Sonómetro Dataloger DT-173
+        echo Zoom
+        echo Audacity 3.7.9
+        echo HP Notifications
+        echo HP One Agent
+        echo HP Update
+        echo IHMC CmapTools v6.04
+        echo Poly Studio
+        echo WXP Insights Agent
+        echo WXP Insights Analytics
+        echo WXP Insights Analytics - Dependencies
     ) > "%RUTA_LISTA%"
     cls
     echo +================================================================+
