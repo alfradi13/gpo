@@ -45,40 +45,6 @@ winget upgrade --id Microsoft.Office --accept-package-agreements --accept-source
 echo       [ OK ] Proceso de software finalizado.
 echo.
 
-echo  [3/3] Verificando agentes de seguridad y monitoreo (Admin. de Tareas)...
-echo.
-
-REM --- Verificacion de Horus ---
-tasklist 2>nul | findstr /i /c:"horus" >nul
-if %errorLevel% EQU 0 (
-    echo       [ ACTIVO ] Horus detectado en ejecucion.
-) else (
-    echo       [ INACTIVO ] Horus no encontrado.
-)
-
-REM --- Verificacion de Absolute (RPCNET) ---
-tasklist 2>nul | findstr /i /c:"rpcnet" /c:"absolute" >nul
-if %errorLevel% EQU 0 (
-    echo       [ ACTIVO ] Absolute (RPCNET) detectado en ejecucion.
-) else (
-    echo       [ INACTIVO ] Absolute no encontrado.
-)
-
-REM --- Verificacion de ActivTrack ---
-tasklist 2>nul | findstr /i /c:"activtrack" /c:"svctcom" >nul
-if %errorLevel% EQU 0 (
-    echo       [ ACTIVO ] ActivTrack detectado en ejecucion.
-) else (
-    echo       [ INACTIVO ] ActivTrack no encontrado.
-)
-
-REM --- Verificacion de HP Proactive Insight ---
-tasklist 2>nul | findstr /i /c:"hpvsc" /c:"proactive" /c:"hp.proactive" >nul
-if %errorLevel% EQU 0 (
-    echo       [ ACTIVO ] HP Proactive Insight detectado en ejecucion.
-) else (
-    echo       [ INACTIVO ] HP Proactive Insight no encontrado.
-)
 
 echo.
 echo +================================================================+
