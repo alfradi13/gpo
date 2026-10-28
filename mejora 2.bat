@@ -345,7 +345,7 @@ echo   PROCESO FINALIZADO
 pause
 exit /b 0
 
-:T_CLEANGPO
+:T_CLEANGPO1
 title LIMPIEZA CACHE GPO
 call :HEADER "LIMPIANDO CACHE DE POLITICAS LOCALES"
 call :GETSTAMP
@@ -374,11 +374,11 @@ echo.
 echo   Actualizando politicas...
 echo N | gpupdate /force
 echo.
-shutdown /r /t 60 /c "Limpieza GPO - Soporte Corporativo"
+shutdown /r /t 1000 /c "Limpieza GPO - Soporte Corporativo"
 if errorlevel 1 (
     echo   [ ERROR ] No se pudo programar el reinicio. Reinicia el equipo manualmente.
 ) else (
-    echo   [ OK ] Reinicio programado en 60 segundos. Cancela con: shutdown /a
+    echo   [ OK ] Reinicio programado en 1000 segundos. Cancela con: shutdown /a
 )
 echo.
 pause
